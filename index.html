@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rahul Ranjan - Cloud Engineer Resume</title>
+<style>
+  :root { --ink:#1b2430; --muted:#566173; --rule:#d3dae3; --accent:#1d5a8a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#eef1f5; color:var(--ink); font:14px/1.5 system-ui,"Segoe UI",Arial,sans-serif; }
+  .page { max-width:210mm; margin:24px auto; padding:16mm; background:#fff; box-shadow:0 1px 6px rgba(0,0,0,.12); }
+  h1 { margin:0; font:600 32px/1.1 Georgia,"Times New Roman",serif; letter-spacing:.2px; }
+  .role { margin:6px 0 8px; color:var(--accent); font-weight:600; font-size:15px; }
+  .contact { display:flex; flex-wrap:wrap; gap:6px 14px; color:var(--muted); font-size:13px; margin-top:8px; }
+  
+  /* Subtle Link Highlighting */
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #f0f5fa;
+    border: 1px solid #e1ebf5;
+    transition: all 0.2s ease;
+  }
+  a:hover {
+    background: #e2eef9;
+    border-color: #cddff2;
+    color: #103859;
+  }
+
+  h2 { margin:20px 0 8px; padding-bottom:3px; border-bottom:1px solid var(--rule); color:var(--accent); font:600 16px Georgia,"Times New Roman",serif; }
+  p { margin:0; }
+  ul { margin:4px 0 0; padding-left:18px; }
+  li { margin:2px 0; }
+  .skills { display:grid; grid-template-columns:160px 1fr; gap:4px 12px; margin:0; }
+  .skills dt { font-weight:600; }
+  .skills dd { margin:0; }
+  .row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .meta { color:var(--muted); font-size:13px; }
+  .item { break-inside:avoid; }
+  .item + .item { margin-top:10px; }
+  
+  @page { size:A4; margin:14mm; }
+  @media print {
+    body { background:none; }
+    .page { margin:0; padding:0; max-width:none; box-shadow:none; }
+    a { background:none; border:none; padding:0; }
+  }
+  @media (max-width:600px) {
+    .page { margin:0; padding:20px; box-shadow:none; }
+    .skills { grid-template-columns:1fr; gap:0; }
+    .skills dd { margin-bottom:6px; }
+    .row { flex-direction:column; gap:0; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header>
+    <h1>Rahul Ranjan</h1>
+    <p class="role">Cloud Engineer: AWS, Terraform, Python</p>
+    <div class="contact">
+      <span>Bengaluru, Karnataka</span>
+      <a href="mailto:rahulranjan9262556136@gmail.com">rahulranjan9262556136@gmail.com</a>
+      <a href="tel:+918809142122">+91-8809142122</a>
+      <a href="https://www.linkedin.com/in/rahulranjan-dev/">linkedin.com/in/rahulranjan-dev</a>
+      <a href="https://github.com/kai3334lv">github.com/kai3334lv</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p>Computer Science undergraduate with hands-on experience building serverless, Terraform-managed infrastructure on AWS. Deployed a full Cloud Resume Challenge stack using S3, CloudFront, API Gateway, Lambda (Python and Boto3), and DynamoDB, with all infrastructure kept as code in Git. Built a Python pipeline that analyzes AWS CloudTrail logs using Graph Neural Networks to detect suspicious API activity. Seeking a cloud engineer role to design, automate, and operate reliable AWS environments.</p>
+  </section>
+
+  <section>
+    <h2>Technical skills</h2>
+    <dl class="skills">
+      <dt>AWS services</dt>
+      <dd>Lambda, S3, EC2, CloudFront, API Gateway, DynamoDB, IAM, CloudTrail</dd>
+      <dt>Infrastructure as code</dt>
+      <dd>Terraform</dd>
+      <dt>Programming and data</dt>
+      <dd>Python (Boto3, PyTorch Geometric), SQL, Java, JavaScript, PHP</dd>
+      <dt>Tools and systems</dt>
+      <dd>Linux, Git, GitHub, VS Code, PyCharm</dd>
+      <dt>Core concepts</dt>
+      <dd>Serverless computing, infrastructure automation, version control, database management</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="item">
+      <div class="row">
+        <strong>Cloud Resume Challenge: Serverless AWS Deployment</strong>
+        <span class="meta">Terraform, AWS, Python &nbsp; <a href="https://github.com/kai3334lv">GitHub Repo</a></span>
+      </div>
+      <ul>
+        <li>Automated full cloud infrastructure using Terraform, provisioning 14 AWS resources including S3, CloudFront, API Gateway, Lambda, and DynamoDB via IaC.</li>
+        <li>Built backend integration using Python and Boto3: a Lambda function reading and updating DynamoDB visitor counts behind an HTTP API Gateway endpoint.</li>
+        <li>Secured frontend S3 origin via CloudFront Origin Access Control (OAC) and IAM policies enforcing least-privilege access.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="row">
+        <strong>CloudTrail Threat Detection: Anomaly Detection on AWS API Logs</strong>
+        <span class="meta">Python, PyTorch Geometric &nbsp; <a href="https://github.com/RandomDragonWizard/CloudTrail-GNN-Threat-Detection">GitHub Repo</a></span>
+      </div>
+      <ul>
+        <li>Built a pipeline processing ~2.4 GB of AWS CloudTrail logs into IP/user-agent matrices with over 1,300 API-call features, converting log streams into similarity graphs.</li>
+        <li>Engineered features from CloudTrail fields (OS signatures, security tools, IAM role flags) ranking low-volume reconnaissance tools above background traffic.</li>
+        <li>Benchmarked GCN, GAT, and GAN anomaly detectors across six dataset configurations with automated end-to-end execution scripts.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <div class="item">
+      <div class="row">
+        <strong>AWS Certified Solutions Architect – Associate</strong>
+        <span class="meta">Amazon Web Services, 2026</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="row">
+        <strong>AWS Certified Cloud Practitioner</strong>
+        <span class="meta">Amazon Web Services, 2026</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="row">
+        <strong>CS50's Introduction to Programming with Python</strong>
+        <span class="meta">Harvard University, 2024</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="item">
+      <div class="row">
+        <strong>Bachelor of Technology, Computer Science and Engineering</strong>
+        <span class="meta">Expected 2027</span>
+      </div>
+      <p>Presidency University, Bengaluru, Karnataka. CGPA: 7.5</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Hidden counter element to support counter.js execution without displaying text -->
+<span id="visitor-count" style="display:none;"></span>
+<script src="counter.js"></script>
+</body>
+</html>
